@@ -29,10 +29,12 @@
     h1 {
       text-align: center;
       color: #3b5998;
-      margin: 20px 0;
+      margin: 20px;
       font-size: 2rem;
+      padding: 0 10px;
     }
 
+    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -70,6 +72,7 @@
       color: var(--primary-color);
     }
 
+    /* Hamburger Button */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -78,6 +81,7 @@
       width: 30px;
       height: 25px;
       cursor: pointer;
+      z-index: 1001;
     }
 
     .bar {
@@ -105,7 +109,7 @@
       border-radius: 8px;
     }
 
-    /* RESPONSIVE */
+    /* Responsive */
     @media (max-width: 1024px) {
       .image {
         width: 30%;
@@ -128,7 +132,6 @@
         padding: 20px 0;
         box-shadow: 0 4px 8px var(--shadow-color);
         transition: left 0.3s ease-in-out;
-        z-index: 999;
       }
 
       .nav-menu.active {
@@ -163,7 +166,6 @@
 
       h1 {
         font-size: 1.4rem;
-        padding: 0 10px;
       }
     }
 
@@ -183,11 +185,13 @@
   <header>
     <nav class="navbar">
       <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
+
       <div class="hamburger" id="hamburger">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
+
       <ul class="nav-menu" id="navMenu">
         <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
@@ -200,7 +204,7 @@
 
   <h1>Ladkiyan bhi kam nahi hoti 👧💃🏻</h1>
 
-  <!-- IMAGE GRIDS -->
+  <!-- IMAGE GALLERY -->
   <div class="container">
     <img class="image" src="31.jpg">
     <img class="image" src="32.jpg">
@@ -226,6 +230,7 @@
     <img class="image" src="53.jpg">
   </div>
 
+  <!-- Hamburger Toggle Script -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
