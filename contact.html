@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Contact | Dhingali Ghar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
       --primary-color: #FF6B6B;
@@ -23,8 +23,10 @@
     body {
       font-family: Arial, sans-serif;
       background-color: var(--background-color);
+      color: var(--text-color);
     }
 
+    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -62,6 +64,27 @@
       color: var(--primary-color);
     }
 
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: var(--text-color);
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
+
+    /* Contact Header */
     .contact-header {
       text-align: center;
       padding: 60px 20px 20px;
@@ -77,6 +100,7 @@
       color: #666;
     }
 
+    /* Contact Info */
     .contact-info-wrapper {
       display: flex;
       justify-content: center;
@@ -116,6 +140,7 @@
       color: #000;
     }
 
+    /* Map */
     .map-container {
       padding: 30px 20px;
       display: flex;
@@ -131,17 +156,54 @@
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* Responsive */
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
         align-items: flex-start;
       }
 
+      .hamburger {
+        display: flex;
+      }
+
       .nav-menu {
+        position: absolute;
+        top: 70px;
+        left: -100%;
         flex-direction: column;
         width: 100%;
-        gap: 15px;
-        margin-top: 10px;
+        background-color: var(--white-color);
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px var(--shadow-color);
+        transition: left 0.3s ease-in-out;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-item {
+        padding: 15px 0;
+      }
+
+      .nav-link {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+      }
+
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px);
       }
 
       .contact-header {
@@ -172,7 +234,14 @@
   <!-- Navbar -->
   <nav class="navbar">
     <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
-    <ul class="nav-menu">
+
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <ul class="nav-menu" id="navMenu">
       <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
       <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
       <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
@@ -200,7 +269,7 @@
     </div>
   </div>
 
-  <!-- Google Map -->
+  <!-- Map -->
   <div class="map-container">
     <iframe
       class="map"
@@ -211,5 +280,15 @@
     ></iframe>
   </div>
 
+  <!-- JavaScript -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
