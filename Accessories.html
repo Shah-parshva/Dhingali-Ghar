@@ -44,8 +44,7 @@
       box-shadow: 0 2px 4px var(--shadow-color);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      flex-wrap: wrap;
+      z-index: 1001;
     }
 
     .nav-logo {
@@ -80,8 +79,7 @@
       width: 30px;
       height: 25px;
       cursor: pointer;
-      z-index: 1001;
-      transition: 0.3s ease;
+      z-index: 1002;
     }
 
     .bar {
@@ -92,7 +90,6 @@
       transition: 0.4s ease;
     }
 
-    /* Hamburger active animation (X effect) */
     .hamburger.active .bar:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
@@ -122,41 +119,36 @@
       border-radius: 8px;
     }
 
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .image {
-        width: 30%;
-      }
-    }
-
+    /* Responsive Menu (Hamburger Slide-In) */
     @media (max-width: 768px) {
       .hamburger {
         display: flex;
       }
 
-      .navbar {
-        flex-wrap: wrap;
-      }
-
       .nav-menu {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 70%;
+        max-width: 300px;
         background-color: var(--white-color);
-        box-shadow: 0 4px 8px var(--shadow-color);
-        transition: max-height 0.4s ease;
+        padding-top: 80px;
+        box-shadow: 4px 0 8px var(--shadow-color);
+        transition: left 0.4s ease;
+        z-index: 1000;
       }
 
       .nav-menu.active {
-        max-height: 500px;
+        left: 0;
       }
 
       .nav-item {
         padding: 12px 0;
         width: 100%;
-        text-align: center;
+        text-align: left;
+        padding-left: 20px;
       }
 
       .nav-link {
@@ -217,7 +209,47 @@
     <img class="image" src="55.jpg">
     <img class="image" src="59.webp">
     <img class="image" src="58.webp">
-    <!-- Continue with your gallery images... -->
+    <div class="container">
+    <img class="image" src="60.jpg">
+    <img class="image" src="61.jpg">
+    <img class="image" src="62.jpg">
+    <img class="image" src="63.jpg">
+  </div>
+  <div class="container">
+    <img class="image" src="64.jpg">
+    <img class="image" src="65.jpg">
+    <img class="image" src="66.jpg">
+    <img class="image" src="67.jpg">
+  </div>
+  <div class="container">
+    <img class="image" src="68.jpg">
+    <img class="image" src="69.jpg">
+    <img class="image" src="70.webp">
+    <img class="image" src="71.webp">
+  </div>
+  <div class="container">
+    <img class="image" src="73.jpg">
+    <img class="image" src="74.webp">
+    <img class="image" src="75.jpg">
+  </div>
+  <div class="container">
+    <img class="image" src="76.avif">
+    <img class="image" src="73.webp">
+    <img class="image" src="77.jpg">
+  </div>
+  <div class="container">
+    <img class="image" src="79.jpg">
+    <img class="image" src="80.jpg">
+    <img class="image" src="81.jpg">
+    <img class="image" src="78.jpg">
+  </div>
+  <div class="container">
+    <img class="image" src="82.jpg">
+    <img class="image" src="83.jpg">
+    <img class="image" src="84.webp">
+    <img class="image" src="85.jpg">
+  </div>
+
   </div>
 
   <!-- JavaScript -->
