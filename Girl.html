@@ -1,101 +1,116 @@
 <html>
-    <head>
+<head>
+    <title>Girl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for mobile -->
 
-        <title>Girl</title>
-        <style>
-            :root {
-    --primary-color: #FF6B6B; /* A fun coral red */
-    --secondary-color: #4ECDC4; /* A playful teal */
-    --background-color: #F7FFF7; /* A very light mint green */
-    --text-color: #292F36;
-    --white-color: #FFFFFF;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --background-color: #F7FFF7;
+            --text-color: #292F36;
+            --white-color: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: sans-serif;
+            background-color: var(--background-color);
+        }
 
- .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--white-color);
-    box-shadow: 0 2px 4px var(--shadow-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--white-color);
+            box-shadow: 0 2px 4px var(--shadow-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
 
-.nav-link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
 
-.nav-link:hover {
-    color: var(--primary-color);
-}
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
 
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
 
-.nav-actions .cart-btn {
-    background-color: var(--secondary-color);
-}
+        .image {
+            width: 30%;
+            max-width: 300px;
+            background: black;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+        h1 {
+            text-align: center;
+            color: #3b5998;
+            margin: 20px 0;
+        }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: var(--text-color);
-    transition: all 0.3s ease-in-out;
-}
-            .container{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                max-width: 4200px;
-                margin: 0 auto;
-                
-                padding: 40px;
-                
-                
-
-            }
+        /* Responsive Styling */
+        @media (max-width: 768px) {
             .image {
-                width: 20%;
-                margin: 10px;
-                margin-bottom: 100px;
-                background: black;
-                padding: 10px;
-                
-                border-radius: 8px;
+                width: 45%;
             }
-        </style>
-    </head>
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+                align-items: center;
+            }
+
+            .navbar {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
     <header>
         <nav class="navbar">
             <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
@@ -106,49 +121,53 @@
                 <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
                 <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
             </ul>
-            
         </nav>
-        </header>
+    </header>
 
-        <h1><center><font color="#3b5998">Ladkiyan bhi kam nahi hoti👧💃🏻</font></center></h1><br>
-        <div class="container">
-            <img class="image" src="31.jpg" height="30%" width="30%">
-            <img class="image" src="32.jpg" height="30%" width="30%">
-            <img class="image" src="42.jpg" height="30%" width="30%">
-            </div>
-            <div class="container">
-            <img class="image" src="33.webp" height="30%" width="30%">
-            <img class="image" src="36.jpg" height="30%" width="30%">
-            <img class="image" src="34.jpg" height="30%" width="30%">
-        </div>
-        <div class="container">
-         <img class="image" src="35.jpg" height="30%" width="30%">
-         <img class="image" src="36.webp" height="30%" width="30%">
-         <img class="image" src="39.webp" height="30%" width="30%">
-         </div>
-         <div class="container">
-         <img class="image" src="38.webp" height="30%" width="30%">
-         <img class="image" src="40.webp" height="30%" width="30%">
-         <img class="image" src="41.webp" height="30%" width="30%">
-         </div>
+    <h1>Ladkiyan bhi kam nahi hoti 👧💃🏻</h1>
 
-         <div class="container">
-         <img class="image" src="43.jpg " height="30%" width="30%">
-         <img class="image" src="44.jpg" height="30%" width="30%">
-         <img class="image" src="45.webp" height="30%" width="30%">
-         </div>
-         <div class="container">
-         <img class="image" src="46.jpg" height="30%" width="30%">
-         <img class="image" src="48.webp" height="30%" width="30%">
-         <img class="image" src="49.webp" height="30%" width="30%">
-         </div>
-         <div class="container">
-         <img class="image" src="50.jpg" height="30%" width="30%">
-         <img class="image" src="51.jpg" height="30%" width="30%">
-         <img class="image" src="52.jpg" height="30%" width="30%">
-         <img class="image" src="53.jpg" height="30%" width="30%">
-        
-         </div>
+    <!-- IMAGE GALLERIES -->
+    <div class="container">
+        <img class="image" src="31.jpg">
+        <img class="image" src="32.jpg">
+        <img class="image" src="42.jpg">
+    </div>
 
-         
-         
+    <div class="container">
+        <img class="image" src="33.webp">
+        <img class="image" src="36.jpg">
+        <img class="image" src="34.jpg">
+    </div>
+
+    <div class="container">
+        <img class="image" src="35.jpg">
+        <img class="image" src="36.webp">
+        <img class="image" src="39.webp">
+    </div>
+
+    <div class="container">
+        <img class="image" src="38.webp">
+        <img class="image" src="40.webp">
+        <img class="image" src="41.webp">
+    </div>
+
+    <div class="container">
+        <img class="image" src="43.jpg">
+        <img class="image" src="44.jpg">
+        <img class="image" src="45.webp">
+    </div>
+
+    <div class="container">
+        <img class="image" src="46.jpg">
+        <img class="image" src="48.webp">
+        <img class="image" src="49.webp">
+    </div>
+
+    <div class="container">
+        <img class="image" src="50.jpg">
+        <img class="image" src="51.jpg">
+        <img class="image" src="52.jpg">
+        <img class="image" src="53.jpg">
+    </div>
+</body>
+</html>

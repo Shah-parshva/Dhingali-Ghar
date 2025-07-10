@@ -1,163 +1,196 @@
 <html>
-    <head>
+<head>
+    <title>Girl</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- For responsive scaling -->
 
-        <title>Girl</title>
-        <style>
-            :root {
-    --primary-color: #FF6B6B; /* A fun coral red */
-    --secondary-color: #4ECDC4; /* A playful teal */
-    --background-color: #F7FFF7; /* A very light mint green */
-    --text-color: #292F36;
-    --white-color: #FFFFFF;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --background-color: #F7FFF7;
+            --text-color: #292F36;
+            --white-color: #FFFFFF;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: sans-serif;
+            background-color: var(--background-color);
+        }
 
- .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--white-color);
-    box-shadow: 0 2px 4px var(--shadow-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: var(--white-color);
+            box-shadow: 0 2px 4px var(--shadow-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
 
-.nav-link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
 
-.nav-link:hover {
-    color: var(--primary-color);
-}
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
 
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
 
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
 
-.nav-actions .cart-btn {
-    background-color: var(--secondary-color);
-}
+        .image {
+            width: 22%;
+            max-width: 300px;
+            background: black;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+        h1 {
+            text-align: center;
+            color: #3b5998;
+            margin: 20px 0;
+            font-size: 1.5rem;
+        }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: var(--text-color);
-    transition: all 0.3s ease-in-out;
-}
-            .container{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                max-width: 4200px;
-                margin: 0 auto;
-                
-                padding: 40px;
-                
-                
-
-            }
+        /* 📱 Responsive Styles */
+        @media (max-width: 1024px) {
             .image {
-                width: 20%;
-                margin: 10px;
-                margin-bottom: 100px;
-                background: black;
-                padding: 10px;
-                
-                border-radius: 8px;
+                width: 28%;
             }
-        </style>
-    </head>
+        }
 
+        @media (max-width: 768px) {
+            .image {
+                width: 40%;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image {
+                width: 80%;
+            }
+
+            h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
     <header>
         <nav class="navbar">
             <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
             <ul class="nav-menu">
-                 <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
                 <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
                 <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
                 <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
             </ul>
-            
         </nav>
-        </header>
+    </header>
 
-        <h1><center><font color="#3b5998">Soft, Safe, Stylish – Just Like Your Baby Deserves👼</font></center></h1><br>
-        <div class="container">
-            
-            <img class="image" src="54.jpg" height="30%" width="30%">
-            <img class="image" src="55.jpg" height="30%" width="30%">
-            <img class="image" src="59.webp" height="30%" width="30%">
-            <img class="image" src="58.webp" height="30%" width="30%">
-            </div>
+    <h1>Soft, Safe, Stylish – Just Like Your Baby Deserves 👼</h1>
 
-            <div class="container">
-                <img class="image" src="60.jpg" height="30%" width="30%">
-                <img class="image" src="61.jpg" height="30%" width="30%">
-                <img class="image" src="62.jpg" height="30%" width="30%">
-                <img class="image" src="63.jpg" height="30%" width="30%">
-            </div>
-        <div class="container">
-            <img class="image" src="64.jpg" height="30%" width="30%">
-            <img class="image" src="65.jpg" height="30%" width="30%">
-            <img class="image" src="66.jpg" height="30%" width="30%">
-            <img class="image" src="67.jpg" height="30%" width="30%">
-        </div>
-        <div class="container">
-            <img class="image" src="68.jpg" height="30%" width="30%">
-            <img class="image" src="69.jpg" height="30%" width="30%">
-            <img class="image" src="70.webp" height="30%" width="30%">
-            <img class="image" src="71.webp" height="30%" width="30%">
-        </div>
-        <div class="container">
-           
-            <img class="image" src="73.jpg" height="30%" width="30%">
-            <img class="image" src="74.webp" height="30%" width="30%">
-            <img class="image" src="75.jpg" height="30%" width="30%">
-        </div>
-        <div class="container">
-            <img class="image" src="76.avif" height="30%" width="30%">
-            <img class="image" src="73.webp" height="30%" width="30%">
-            <img class="image" src="77.jpg" height="30%" width="30%">
-        </div>
-        <div class="container">
-            <img class="image" src="79.jpg" height="30%" width="30%">
-            <img class="image" src="80.jpg" height="30%" width="30%">
-            <img class="image" src="81.jpg" height="30%" width="30%">
-            <img class="image" src="78.jpg" height="30%" width="30%">
-        </div>
-        <div class="container">
-            <img class="image" src="82.jpg" height="30%" width="30%">
-            <img class="image" src="83.jpg" height="30%" width="30%">
-            <img class="image" src="84.webp" height="30%" width="30%">
-            <img class="image" src="85.jpg" height="30%" width="30%">
-        </div>
+    <!-- Image Gallery Containers -->
+    <div class="container">
+        <img class="image" src="54.jpg">
+        <img class="image" src="55.jpg">
+        <img class="image" src="59.webp">
+        <img class="image" src="58.webp">
+    </div>
+
+    <div class="container">
+        <img class="image" src="60.jpg">
+        <img class="image" src="61.jpg">
+        <img class="image" src="62.jpg">
+        <img class="image" src="63.jpg">
+    </div>
+
+    <div class="container">
+        <img class="image" src="64.jpg">
+        <img class="image" src="65.jpg">
+        <img class="image" src="66.jpg">
+        <img class="image" src="67.jpg">
+    </div>
+
+    <div class="container">
+        <img class="image" src="68.jpg">
+        <img class="image" src="69.jpg">
+        <img class="image" src="70.webp">
+        <img class="image" src="71.webp">
+    </div>
+
+    <div class="container">
+        <img class="image" src="73.jpg">
+        <img class="image" src="74.webp">
+        <img class="image" src="75.jpg">
+    </div>
+
+    <div class="container">
+        <img class="image" src="76.avif">
+        <img class="image" src="73.webp">
+        <img class="image" src="77.jpg">
+    </div>
+
+    <div class="container">
+        <img class="image" src="79.jpg">
+        <img class="image" src="80.jpg">
+        <img class="image" src="81.jpg">
+        <img class="image" src="78.jpg">
+    </div>
+
+    <div class="container">
+        <img class="image" src="82.jpg">
+        <img class="image" src="83.jpg">
+        <img class="image" src="84.webp">
+        <img class="image" src="85.jpg">
+    </div>
+</body>
+</html>
