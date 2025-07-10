@@ -37,15 +37,14 @@
     /* Navbar */
     .navbar {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       padding: 1rem 2rem;
       background-color: var(--white-color);
       box-shadow: 0 2px 4px var(--shadow-color);
       position: sticky;
       top: 0;
       z-index: 1000;
-      flex-wrap: wrap;
     }
 
     .nav-logo {
@@ -53,13 +52,6 @@
       font-weight: bold;
       color: black;
       text-decoration: none;
-    }
-
-    .nav-group {
-      display: flex;
-      align-items: center;
-      margin-left: auto;
-      gap: 1rem;
     }
 
     .nav-menu {
@@ -82,19 +74,23 @@
     .hamburger {
       display: none;
       flex-direction: column;
-      cursor: pointer;
+      justify-content: center;
       gap: 5px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+      z-index: 1001;
     }
 
     .bar {
-      width: 25px;
       height: 3px;
+      width: 100%;
       background-color: var(--text-color);
       border-radius: 2px;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
-    /* Image container */
+    /* Image Gallery */
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -111,37 +107,30 @@
       border-radius: 8px;
     }
 
-    /* Responsive Design */
+    /* Responsive */
     @media (max-width: 1024px) {
       .image {
-        width: 28%;
+        width: 30%;
       }
     }
 
     @media (max-width: 768px) {
-      .navbar {
-        flex-direction: row;
-        align-items: center;
-        padding: 1rem;
-      }
-
-      .nav-group {
-        flex-direction: column;
-        align-items: flex-end;
-        width: 100%;
-      }
-
       .hamburger {
         display: flex;
         margin-left: auto;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
       }
 
       .nav-menu {
         flex-direction: column;
         width: 100%;
         display: none;
-        padding-top: 10px;
         background-color: var(--white-color);
+        box-shadow: 0 4px 8px var(--shadow-color);
+        padding: 10px 0;
       }
 
       .nav-menu.active {
@@ -149,14 +138,14 @@
       }
 
       .nav-item {
-        width: 100%;
         text-align: center;
-        padding: 10px 0;
+        padding: 12px 0;
       }
 
       .nav-link {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: bold;
+        text-transform: uppercase;
       }
 
       .image {
@@ -164,7 +153,7 @@
       }
 
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
     }
 
@@ -186,21 +175,19 @@
     <nav class="navbar">
       <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
 
-      <div class="nav-group">
-        <div class="hamburger" onclick="toggleMenu()">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </div>
-
-        <ul class="nav-menu" id="navMenu">
-          <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
-          <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
-          <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
-          <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
-        </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
       </div>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
+        <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
+        <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
+        <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
@@ -255,7 +242,7 @@
     <img class="image" src="85.jpg">
   </div>
 
-  <!-- JavaScript for Menu Toggle -->
+  <!-- JavaScript -->
   <script>
     function toggleMenu() {
       document.getElementById("navMenu").classList.toggle("active");
