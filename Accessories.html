@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Girl</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     :root {
       --primary-color: #FF6B6B;
@@ -25,17 +26,26 @@
       color: var(--text-color);
     }
 
+    h1 {
+      text-align: center;
+      color: #3b5998;
+      margin: 20px;
+      font-size: 2rem;
+      padding: 0 10px;
+    }
+
     /* Navbar */
     .navbar {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 1rem 2rem;
       background-color: var(--white-color);
       box-shadow: 0 2px 4px var(--shadow-color);
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
     }
 
     .nav-logo {
@@ -43,6 +53,13 @@
       font-weight: bold;
       color: black;
       text-decoration: none;
+    }
+
+    .nav-group {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      gap: 1rem;
     }
 
     .nav-menu {
@@ -94,15 +111,7 @@
       border-radius: 8px;
     }
 
-    h1 {
-      text-align: center;
-      color: #3b5998;
-      margin: 20px;
-      font-size: 2rem;
-      padding: 0 10px;
-    }
-
-    /* Responsive */
+    /* Responsive Design */
     @media (max-width: 1024px) {
       .image {
         width: 28%;
@@ -111,13 +120,20 @@
 
     @media (max-width: 768px) {
       .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         padding: 1rem;
+      }
+
+      .nav-group {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
       }
 
       .hamburger {
         display: flex;
+        margin-left: auto;
       }
 
       .nav-menu {
@@ -170,19 +186,21 @@
     <nav class="navbar">
       <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
 
-      <div class="hamburger" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+      <div class="nav-group">
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
 
-      <ul class="nav-menu" id="navMenu">
-        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
-        <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
-        <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
-        <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
-      </ul>
+        <ul class="nav-menu" id="navMenu">
+          <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
+          <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
+          <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
+          <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -196,47 +214,40 @@
     <img class="image" src="59.webp">
     <img class="image" src="58.webp">
   </div>
-
   <div class="container">
     <img class="image" src="60.jpg">
     <img class="image" src="61.jpg">
     <img class="image" src="62.jpg">
     <img class="image" src="63.jpg">
   </div>
-
   <div class="container">
     <img class="image" src="64.jpg">
     <img class="image" src="65.jpg">
     <img class="image" src="66.jpg">
     <img class="image" src="67.jpg">
   </div>
-
   <div class="container">
     <img class="image" src="68.jpg">
     <img class="image" src="69.jpg">
     <img class="image" src="70.webp">
     <img class="image" src="71.webp">
   </div>
-
   <div class="container">
     <img class="image" src="73.jpg">
     <img class="image" src="74.webp">
     <img class="image" src="75.jpg">
   </div>
-
   <div class="container">
     <img class="image" src="76.avif">
     <img class="image" src="73.webp">
     <img class="image" src="77.jpg">
   </div>
-
   <div class="container">
     <img class="image" src="79.jpg">
     <img class="image" src="80.jpg">
     <img class="image" src="81.jpg">
     <img class="image" src="78.jpg">
   </div>
-
   <div class="container">
     <img class="image" src="82.jpg">
     <img class="image" src="83.jpg">
