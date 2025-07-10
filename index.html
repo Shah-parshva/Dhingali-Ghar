@@ -2,52 +2,68 @@
 <html lang="en">
 <head>
     <title>Kiddie-Wear | Fun Clothes for Kids</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- Defer JS for faster page load -->
-    
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="./index.html" class="nav-link" >Home</a></li>
-                <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
-                <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
-                <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            
-        </nav>
-    </header>
+<header>
+    <nav class="navbar">
+        <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Dhingali Ghar</h1>
-                <p>Jahan Har Bachpan Muskurata Hai 😄😄.</p>
-            </div>
-        </section>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
 
-       
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
+            <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
+            <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
+            <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Dhingali Ghar</h2>
-            <p>Not Just Clothes - A Legacy of Love, Since 2000. <br>
-                We believe that kids' clothes should be as playful and durable as they are. At Dhingali Ghar, we hand-pick the best materials to create comfortable, stylish, and long-lasting outfits for every adventure.</p>
-        </section>
-    </main>
+<main>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Dhingali Ghar</h1>
+            <p>Jahan Har Bachpan Muskurata Hai 😄😄.</p>
+        </div>
+    </section>
 
-    <footer>
-         <center><p style="background-color:grey;" class="a"><br><br>Privacy Policy Terms & Conditions<br><br>
-Copyright © 2024 Responsive . All Rights Reserved | Powered By Responsive Theme <br><br></p>
-    </footer>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Dhingali Ghar</h2>
+        <p>Not Just Clothes - A Legacy of Love, Since 2000. <br>
+        We believe that kids' clothes should be as playful and durable as they are. At Dhingali Ghar, we hand-pick the best materials to create comfortable, stylish, and long-lasting outfits for every adventure.</p>
+    </section>
+</main>
 
-    
-    </div>
+<footer>
+    <center>
+        <p style="background-color:grey;" class="a"><br><br>
+        Privacy Policy Terms & Conditions<br><br>
+        Copyright © 2024 Responsive. All Rights Reserved | Powered By Responsive Theme<br><br>
+        </p>
+    </center>
+</footer>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
