@@ -34,7 +34,6 @@
       padding: 0 10px;
     }
 
-    /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -102,7 +101,6 @@
       transform: rotate(-45deg) translate(6px, -6px);
     }
 
-    /* Image Grid */
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -119,7 +117,12 @@
       border-radius: 8px;
     }
 
-    /* Responsive Menu (Hamburger Slide-In) */
+    @media (max-width: 1024px) {
+      .image {
+        width: 30%;
+      }
+    }
+
     @media (max-width: 768px) {
       .hamburger {
         display: flex;
@@ -134,11 +137,9 @@
         width: 70%;
         max-width: 300px;
         background-color: var(--white-color);
-
+        padding-top: 80px;
         box-shadow: 4px 0 8px var(--shadow-color);
-        transition: left 0.3s ease-in-out;
-        padding: 20px;
-        
+        transition: left 0.4s ease;
       }
 
       .nav-menu.active {
@@ -153,7 +154,7 @@
       }
 
       .nav-link {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -181,76 +182,58 @@
 
 <body>
   <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
+  <nav class="navbar">
+    <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
 
-      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
 
-      <ul class="nav-menu" id="navMenu">
-        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
-        <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
-        <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
-        <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
+      <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
+      <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
+      <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Heading -->
   <h1>Soft, Safe, Stylish – Just Like Your Baby Deserves 👼</h1>
 
-  <!-- Image Gallery -->
+  <!-- Gallery -->
   <div class="container">
-    <img class="image" src="54.jpg">
-    <img class="image" src="55.jpg">
-    <img class="image" src="59.webp">
-    <img class="image" src="58.webp">
-    <div class="container">
-    <img class="image" src="60.jpg">
-    <img class="image" src="61.jpg">
-    <img class="image" src="62.jpg">
-    <img class="image" src="63.jpg">
-  </div>
-  <div class="container">
-    <img class="image" src="64.jpg">
-    <img class="image" src="65.jpg">
-    <img class="image" src="66.jpg">
-    <img class="image" src="67.jpg">
-  </div>
-  <div class="container">
-    <img class="image" src="68.jpg">
-    <img class="image" src="69.jpg">
-    <img class="image" src="70.webp">
-    <img class="image" src="71.webp">
-  </div>
-  <div class="container">
-    <img class="image" src="73.jpg">
-    <img class="image" src="74.webp">
-    <img class="image" src="75.jpg">
-  </div>
-  <div class="container">
-    <img class="image" src="76.avif">
-    <img class="image" src="73.webp">
-    <img class="image" src="77.jpg">
-  </div>
-  <div class="container">
-    <img class="image" src="79.jpg">
-    <img class="image" src="80.jpg">
-    <img class="image" src="81.jpg">
-    <img class="image" src="78.jpg">
-  </div>
-  <div class="container">
-    <img class="image" src="82.jpg">
-    <img class="image" src="83.jpg">
-    <img class="image" src="84.webp">
-    <img class="image" src="85.jpg">
-  </div>
-
+    <img class="image" src="54.jpg" alt="">
+    <img class="image" src="55.jpg" alt="">
+    <img class="image" src="59.webp" alt="">
+    <img class="image" src="58.webp" alt="">
+    <img class="image" src="60.jpg" alt="">
+    <img class="image" src="61.jpg" alt="">
+    <img class="image" src="62.jpg" alt="">
+    <img class="image" src="63.jpg" alt="">
+    <img class="image" src="64.jpg" alt="">
+    <img class="image" src="65.jpg" alt="">
+    <img class="image" src="66.jpg" alt="">
+    <img class="image" src="67.jpg" alt="">
+    <img class="image" src="68.jpg" alt="">
+    <img class="image" src="69.jpg" alt="">
+    <img class="image" src="70.webp" alt="">
+    <img class="image" src="71.webp" alt="">
+    <img class="image" src="73.jpg" alt="">
+    <img class="image" src="74.webp" alt="">
+    <img class="image" src="75.jpg" alt="">
+    <img class="image" src="76.avif" alt="">
+    <img class="image" src="73.webp" alt="">
+    <img class="image" src="77.jpg" alt="">
+    <img class="image" src="79.jpg" alt="">
+    <img class="image" src="80.jpg" alt="">
+    <img class="image" src="81.jpg" alt="">
+    <img class="image" src="78.jpg" alt="">
+    <img class="image" src="82.jpg" alt="">
+    <img class="image" src="83.jpg" alt="">
+    <img class="image" src="84.webp" alt="">
+    <img class="image" src="85.jpg" alt="">
   </div>
 
   <!-- JavaScript -->
