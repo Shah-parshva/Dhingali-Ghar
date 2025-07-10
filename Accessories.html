@@ -45,6 +45,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      flex-wrap: wrap;
     }
 
     .nav-logo {
@@ -90,7 +91,7 @@
       transition: 0.3s ease;
     }
 
-    /* Image Gallery */
+    /* Image Grid */
     .container {
       display: flex;
       flex-wrap: wrap;
@@ -120,26 +121,25 @@
         margin-left: auto;
       }
 
-      .navbar {
-        flex-wrap: wrap;
-      }
-
       .nav-menu {
         flex-direction: column;
+        align-items: center;
         width: 100%;
-        display: none;
+        max-height: 0;
+        overflow: hidden;
         background-color: var(--white-color);
         box-shadow: 0 4px 8px var(--shadow-color);
-        padding: 10px 0;
+        transition: max-height 0.4s ease;
       }
 
       .nav-menu.active {
-        display: flex;
+        max-height: 500px; /* Enough to show all items */
       }
 
       .nav-item {
-        text-align: center;
         padding: 12px 0;
+        width: 100%;
+        text-align: center;
       }
 
       .nav-link {
@@ -242,10 +242,11 @@
     <img class="image" src="85.jpg">
   </div>
 
-  <!-- JavaScript -->
+  <!-- JavaScript for Hamburger -->
   <script>
     function toggleMenu() {
-      document.getElementById("navMenu").classList.toggle("active");
+      const menu = document.getElementById("navMenu");
+      menu.classList.toggle("active");
     }
   </script>
 </body>
