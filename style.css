@@ -99,17 +99,24 @@ section {
 
 .hamburger {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 35px;
+    height: 30px;
     cursor: pointer;
+    z-index: 2000;
 }
 
+
 .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
+    height: 4px;
+    width: 100%;
     background-color: var(--text-color);
-    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    transition: 0.3s ease;
 }
+
 
 /* --- Hero Section --- */
 #hero {
@@ -141,7 +148,6 @@ section {
 
     .hamburger {
         display: block;
-        z-index: 2000;
     }
 
     .nav-menu {
