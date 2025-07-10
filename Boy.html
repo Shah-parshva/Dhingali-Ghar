@@ -1,148 +1,232 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Boy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --primary-color: #FF6B6B;
+      --secondary-color: #4ECDC4;
+      --background-color: #F7FFF7;
+      --text-color: #292F36;
+      --white-color: #FFFFFF;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+    }
 
-        <title>Boy</title>
-        <style>
-            :root {
-    --primary-color: #FF6B6B; /* A fun coral red */
-    --secondary-color: #4ECDC4; /* A playful teal */
-    --background-color: #F7FFF7; /* A very light mint green */
-    --text-color: #292F36;
-    --white-color: #FFFFFF;
-    --shadow-color: rgba(0, 0, 0, 0.1);
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
 
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      color: #3b5998;
+      font-size: 2rem;
+    }
 
-            .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--white-color);
-    box-shadow: 0 2px 4px var(--shadow-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--white-color);
+      box-shadow: 0 2px 4px var(--shadow-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-.nav-link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
 
-.nav-link:hover {
-    color: var(--primary-color);
-}
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
 
+    .nav-link {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
+    .nav-link:hover {
+      color: var(--primary-color);
+    }
 
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+    }
 
-.nav-actions .cart-btn {
-    background-color: var(--secondary-color);
-}
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: var(--text-color);
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+    /* IMAGE GRID */
+    .container,
+    .Hero,
+    .Hero1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: var(--text-color);
-    transition: all 0.3s ease-in-out;
-}
-            .container{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                max-width: 4200px;
-                margin: 0 auto;
-                
-                padding: 40px;
-                
-                
+    .image {
+      width: 22%;
+      border-radius: 8px;
+      background-color: black;
+      padding: 5px;
+    }
 
-            }
-            .image {
-                width: 20%;
-                margin: 10px;
-                margin-bottom: 100px;
-                background: black;
-                padding: 10px;
-                
-                border-radius: 8px;
-            }
-        </style>
-    </head>
+    /* RESPONSIVE MEDIA QUERY */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-wrap: wrap;
+      }
 
-        <header>
-        <nav class="navbar">
-            <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
-                <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
-                <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            
-        </nav>
-        </header>
-        <h1><center><font color="#3b5998">Dress up your little hero 😎</font></center></h1><br>
-        <div class="container">
-            <img class="image" src="2.avif" height="30%" width="30%">
-            <img class="image" src="4.jpg" height="30%" width="30%">
-            <img class="image" src="3.jpg" height="20%" width="20%">
-            <img class="image" src="5.jpg" height="30%" width="30%">
-            <img class="image" src="13.jpg" height="30%" width="30%">
-            <img class="image" src="10.jpg" height="10%" width="30%">
-            <img class="image" src="11.jpg" height="30%" width="30%">
-            
-    
-            </div>
-            <div class="Hero">
-                <img class="image" src="14.jpg" height="50%" width="50%">
-                <img class="image" src="15.jpg" height="50%" width="50%">
-                <img class="image" src="16.jpg" height="50%" width="50%">
-                <img class="image" src="17.jpg" height="50%" width="50%">
-                <img class="image" src="18.jpg" height="50%" width="50%">
-                <img class="image" src="19.jpg" height="50%" width="50%">
-                <img class="image" src="20.jpg" height="50%" width="50%">
-                <img class="image" src="21.jpg" height="50%" width="50%">
-                
-            </div>
-            <div class="Hero1">
-                <img class="image" src="23.jpg" height="50%" width="50%">
-                <img class="image" src="24.webp" height="50%" width="50%">
-                <img class="image" src="25.jpg" height="50%" width="50%">
-                <img class="image" src="26.jpg" height="50%" width="50%">
-                <img class="image" src="28.jpg" height="50%" width="50%">
-                <img class="image" src="27.webp" height="50%" width="50%">
-                <img class="image" src="29.webp" height="50%" width="50%">
-                <img class="image" src="30.webp" height="50%" width="50%">     
-            </div>
-        
-    </body>
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--white-color);
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        padding: 20px 0;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-item {
+        padding: 15px 0;
+      }
+
+      .nav-link {
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translateY(6px);
+      }
+
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translateY(-6px);
+      }
+
+      .image {
+        width: 45%;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
+
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
+        <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
+        <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
+        <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Dress up your little hero 😎</h1>
+
+  <div class="container">
+    <img class="image" src="2.avif" />
+    <img class="image" src="4.jpg" />
+    <img class="image" src="3.jpg" />
+    <img class="image" src="5.jpg" />
+    <img class="image" src="13.jpg" />
+    <img class="image" src="10.jpg" />
+    <img class="image" src="11.jpg" />
+  </div>
+
+  <div class="Hero">
+    <img class="image" src="14.jpg" />
+    <img class="image" src="15.jpg" />
+    <img class="image" src="16.jpg" />
+    <img class="image" src="17.jpg" />
+    <img class="image" src="18.jpg" />
+    <img class="image" src="19.jpg" />
+    <img class="image" src="20.jpg" />
+    <img class="image" src="21.jpg" />
+  </div>
+
+  <div class="Hero1">
+    <img class="image" src="23.jpg" />
+    <img class="image" src="24.webp" />
+    <img class="image" src="25.jpg" />
+    <img class="image" src="26.jpg" />
+    <img class="image" src="28.jpg" />
+    <img class="image" src="27.webp" />
+    <img class="image" src="29.webp" />
+    <img class="image" src="30.webp" />
+  </div>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
 </html>
