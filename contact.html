@@ -1,204 +1,215 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | Dhingali Ghar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary-color: #FF6B6B;
+      --secondary-color: #4ECDC4;
+      --background-color: #F7FFF7;
+      --text-color: #292F36;
+      --white-color: #FFFFFF;
+      --shadow-color: rgba(0, 0, 0, 0.1);
+    }
 
-        <title>Boy</title>
-        <style>
-      
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--background-color);
+    }
 
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1rem 2rem;
+      background-color: var(--white-color);
+      box-shadow: 0 2px 4px var(--shadow-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-            .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: var(--white-color);
-    box-shadow: 0 2px 4px var(--shadow-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
+    .nav-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
 
-.nav-link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-}
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
 
-.nav-link:hover {
-    color: var(--primary-color);
-}
+    .nav-link {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
+    .nav-link:hover {
+      color: var(--primary-color);
+    }
 
+    .contact-header {
+      text-align: center;
+      padding: 60px 20px 20px;
+    }
 
+    .contact-header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
 
-.nav-actions .cart-btn {
-    background-color: var(--secondary-color);
-}
+    .contact-header p {
+      font-size: 1rem;
+      color: #666;
+    }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+    .contact-info-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      padding: 30px;
+      background: rgb(245, 245, 245);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: var(--text-color);
-    transition: all 0.3s ease-in-out;
-}
-.contact-header {
-    text-align: center;
-    padding: 60px 20px 20px;
-}
-.contact-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-}
+    .contact-info {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 500px;
+    }
 
-.contact-header p {
-    font-size: 16px;
-    color: #666;
-}
+    .contact-info h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #333;
+    }
 
-.contact-info-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    padding: 30px;
-    background: rgb(245, 245, 245);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+    .contact-info p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #555;
+    }
 
-.contact-info {
-    text-align: center;
-    padding: 20px;
-    background: rgb(238, 238, 238);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
+    .contact-info strong {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #000;
+    }
 
-.contact-info h3 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    letter-spacing: 1px;
-    color: #333;
-}
+    .map-container {
+      padding: 30px 20px;
+      display: flex;
+      justify-content: center;
+    }
 
-.contact-info p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-.contact-info strong {
-    display: block;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-.map {
-      margin: 50px auto 0;
+    .map {
+      width: 100%;
       max-width: 1000px;
       height: 350px;
       border: 0;
-      width: 500%;
       border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     @media (max-width: 768px) {
       .navbar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px;
       }
 
-      .nav-links {
+      .nav-menu {
         flex-direction: column;
-        gap: 15px;
         width: 100%;
+        gap: 15px;
+        margin-top: 10px;
       }
 
       .contact-header {
-        padding: 20px 20px 40px;
+        padding: 40px 20px 20px;
       }
 
       .contact-info-wrapper {
         padding: 20px;
       }
 
-      .contact-info {
-        width: 100%;
+      .contact-info h3 {
+        font-size: 1.3rem;
+      }
+
+      .contact-info p {
+        font-size: 0.95rem;
+      }
+
+      .map {
+        height: 300px;
       }
     }
-</style>
+  </style>
 </head>
+
 <body>
-        
-        <nav class="navbar">
-            <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
-                <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
-                <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
-            </ul>
-            
-        </nav>
-        
 
-        <div class="contact-header">
-            <h1>Get in Touch</h1>
-            <p>Have a question or need help? we'd love to hear from you.</p>
-        </div>
-        <div class="contact-info-wrapper">
-            <div class="contact-info">
-                <h3>Showroom Address</h3>
-                <p>Dhingali Ghar</p>
-                <p>5, Navkar Complex, Panjrapol Road ,</p>
-                <p>Botad</p>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="logo.jpg" class="nav-logo">Dhingali Ghar</a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="./Boy.html" class="nav-link">Boy</a></li>
+      <li class="nav-item"><a href="./Girl.html" class="nav-link">Girl</a></li>
+      <li class="nav-item"><a href="./Accessories.html" class="nav-link">Accessories</a></li>
+      <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
 
-                <strong>Phone<strong>
-                    <p>+91 9909318881</p>
-                    <p>+91 9924078767</p>
-            </div>
-        </div>
-        <iframe
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2193.7933711099954!2d71.66668147697447!3d22.17130757309922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958db7e0778320d%3A0x3577ed519be2bc3b!2sBotad%20Mahajan%20Panjarapol!5e1!3m2!1sen!2sus!4v1751575408707!5m2!1sen!2sus" width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    
+  <!-- Contact Header -->
+  <div class="contact-header">
+    <h1>Get in Touch</h1>
+    <p>Have a question or need help? We'd love to hear from you.</p>
+  </div>
 
+  <!-- Contact Info -->
+  <div class="contact-info-wrapper">
+    <div class="contact-info">
+      <h3>Showroom Address</h3>
+      <p>Dhingali Ghar</p>
+      <p>5, Navkar Complex, Panjrapol Road,</p>
+      <p>Botad</p>
+      <strong>Phone</strong>
+      <p>+91 9909318881</p>
+      <p>+91 9924078767</p>
+    </div>
+  </div>
 
-        <script>
-            const link = document.querySelectorAll('.nav-item');
-            const currentpage = location.pathname.split("/").pop();
-            links.forEach(link => {
-                if (link.getAttribute("href")== currentpage) {
-                    link.classList.add("active");
-                }
-            });
-        </script>
-        </html>
+  <!-- Google Map -->
+  <div class="map-container">
+    <iframe
+      class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2193.7933711099954!2d71.66668147697447!3d22.17130757309922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958db7e0778320d%3A0x3577ed519be2bc3b!2sBotad%20Mahajan%20Panjarapol!5e1!3m2!1sen!2sus!4v1751575408707!5m2!1sen!2sus"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+</body>
+</html>
